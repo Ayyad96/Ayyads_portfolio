@@ -56,3 +56,32 @@ SET company =
 		WHEN platform IN ('3DO') THEN 'The 3DO Company'
 		ELSE 'PC'
 	END;
+
+ SELECT DISTINCT company, platform, SUM(globalsales)
+FROM vcon 
+GROUP BY company, platform
+ORDER BY SUM(globalsales) DESC
+
+SELECT DISTINCT company, platform, SUM(globalsales)
+FROM vcon
+GROUP BY company, platform
+ORDER BY SUM(globalsales) DESC
+
+SELECT DISTINCT platform, SUM(globalsales)
+FROM vcon
+WHERE company = 'Sony'
+GROUP BY platform
+ORDER BY SUM(globalsales) DESC
+
+SELECT DISTINCT platform, SUM(globalsales)
+FROM vcon
+WHERE company = 'Microsoft'
+GROUP BY platform
+ORDER BY SUM(globalsales) DESC
+
+SELECT DISTINCT platform, SUM(globalsales)
+FROM vcon
+WHERE company = 'Sega'
+GROUP BY platform
+ORDER BY SUM(globalsales) DESC
+
