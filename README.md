@@ -57,31 +57,8 @@ SET company =
 		ELSE 'PC'
 	END;
 
- SELECT DISTINCT company, platform, SUM(globalsales)
+SELECT DISTINCT company, platform, SUM(globalsales)
 FROM vcon 
 GROUP BY company, platform
-ORDER BY SUM(globalsales) DESC
-
-SELECT DISTINCT company, platform, SUM(globalsales)
-FROM vcon
-GROUP BY company, platform
-ORDER BY SUM(globalsales) DESC
-
-SELECT DISTINCT platform, SUM(globalsales)
-FROM vcon
-WHERE company = 'Sony'
-GROUP BY platform
-ORDER BY SUM(globalsales) DESC
-
-SELECT DISTINCT platform, SUM(globalsales)
-FROM vcon
-WHERE company = 'Microsoft'
-GROUP BY platform
-ORDER BY SUM(globalsales) DESC
-
-SELECT DISTINCT platform, SUM(globalsales)
-FROM vcon
-WHERE company = 'Sega'
-GROUP BY platform
-ORDER BY SUM(globalsales) DESC
+ORDER BY company, SUM(globalsales) DESC
 
