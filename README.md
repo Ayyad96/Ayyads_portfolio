@@ -18,8 +18,9 @@ ORDER BY copysales DESC;
 SELECT DISTINCT name, SUM(globalsales) AS copysales, AVG(userscore) AS avgscore, SUM(usercount) AS totalfeedback
 FROM vcon 
 WHERE year BETWEEN 2010 AND 2020
-GROUP BY name
-ORDER BY copysales DESC;
+GROUP BY name 
+ORDER BY copysales DESC 
+LIMIT 10;
 
 /* Identifying the best video games that has the highest average score of user experience for the last 10 years */
 
