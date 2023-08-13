@@ -53,6 +53,12 @@ GROUP BY publisher
 ORDER BY psales DESC
 LIMIT 5;
 
+
+/*
+<img width="635" alt="sum_globalsale_by_publisher" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/f4fbe034-1c19-4032-8371-d7fe615f2ffb">
+*/
+
+
 -- Identifying which year contributes to the highest selling of video games copies anually in this consoles games industry
 
 SELECT DISTINCT year, SUM(globalsales) AS total_sales
@@ -79,7 +85,13 @@ FROM vcon
 GROUP BY platform
 ORDER BY GLOBAL_SALES DESC;
 
--- Getting confused of a certain data under platform column, proceed making some research 
+
+/*
+<img width="636" alt="sum_globalsales_by_company_platform" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/4c67735a-1338-4ea9-894c-ae04dc4e29bf">
+*/
+
+
+-- Getting an interest of a certain data under platform column, proceed making some research 
 
 SELECT * FROM vcon WHERE platform = '2600';
 
@@ -111,7 +123,17 @@ FROM vcon
 GROUP BY company, platform
 ORDER BY company, SUM(globalsales) DESC;
 
--- Based on the trend of each company each time a new upgraded version of console gaming platform, we saw a downfall in video games copies sales eventhough the company launch new upgraded version of gaming platform 
--- Seeing the market trend, this industry are moving towards market collapsing based on this data, however the data is having a bias and defect since we're getting a lot of null values and some of the year are missing in this dataseset 
 
+/*
+<img width="635" alt="sum_globalsales_by_year" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/1ce515db-a88b-4394-930e-ef767fa4d8ac">
+*/
+
+
+-- Based on the trend of each company each time a new upgraded version of console gaming platform, we saw a downfall in video games copies sales eventhough the company launch new upgraded version of gaming platform 
+-- Seeing the market trend, this industry are moving towards market collapsing based on this data, however the data is having a bias and defect since we're getting a lot of null and some of the year are missing in this dataseset 
+
+
+/*
+<img width="606" alt="Full_gameanalysis_portfolio_report" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/52efdd39-c711-4f82-8b74-ff815369811d">
+*/
 
