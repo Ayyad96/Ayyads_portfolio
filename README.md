@@ -91,7 +91,7 @@ ORDER BY GLOBAL_SALES DESC;
 */
 
 
--- Getting an interest of a certain data under platform column, proceed making some research 
+-- Facing uncertainty over a certain data under platform column, proceed making some research 
 
 SELECT * FROM vcon WHERE platform = '2600';
 
