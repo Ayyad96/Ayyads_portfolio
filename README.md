@@ -14,10 +14,6 @@ FROM vcon
 GROUP BY name
 ORDER BY copysales DESC;
 
-/*
-<img width="635" alt="sum_of_global_sales_by_name" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/8edfafff-950c-4fbd-8ce9-f53472482a51">
-*/
-
 -- Selecting the highest selling video games in global market for the last 10 years 
 
 SELECT DISTINCT name, SUM(globalsales) AS copysales, AVG(userscore) AS avgscore, SUM(usercount) AS totalfeedback
@@ -27,6 +23,12 @@ GROUP BY name
 ORDER BY copysales DESC 
 LIMIT 10;
 
+
+/*
+<img width="635" alt="sum_of_global_sales_by_name" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/8edfafff-950c-4fbd-8ce9-f53472482a51">
+*/
+
+
 -- Identifying the best video games that has the highest average score of user experience for the last 10 years 
 
 SELECT name, AVG(userscore)
@@ -35,6 +37,12 @@ WHERE userscore IS NOT NULL AND year >= 2010 AND year <= 2020
 GROUP BY name
 ORDER BY AVG(userscore) DESC
 LIMIT 10;
+
+
+/*
+<img width="635" alt="average_userscore_by_name" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/9be7c4d5-8cf0-47a1-8b5e-21cdb84c517a">
+*/
+
 
 -- Identifying the best publisher in terms of collecting the highest revenue in selling video games copies globally 
 
