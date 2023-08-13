@@ -14,9 +14,9 @@ FROM vcon
 GROUP BY name
 ORDER BY copysales DESC;
 
-
+/*
 <img width="635" alt="sum_of_global_sales_by_name" src="https://github.com/Ayyad96/Ayyads_portfolio/assets/140683898/8edfafff-950c-4fbd-8ce9-f53472482a51">
-
+*/
 
 /* Selecting the highest selling video games in global market for the last 10 years */
 
